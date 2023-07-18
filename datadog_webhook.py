@@ -11,15 +11,6 @@ AZURE_IP = "52.136.121.3"
 CLOUDFLARE_KEY = os.getenv('CLOUDFLARE_API_KEY')
 CLOUDFLARE_KEY = "Bearer " + CLOUDFLARE_KEY
 
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
-
-
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Union[str, None] = None):
-    return {"item_id": item_id, "q": q}
-
 @app.post("/lucianp2dr")
 def lucian2dr():
     cloudflare_update_ip(AZURE_IP)
