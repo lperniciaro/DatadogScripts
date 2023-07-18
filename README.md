@@ -5,6 +5,8 @@ Webhooks are not customizable and can only send POST requests.
 
 This script listens for post request on a given port and redirects for my usage.
 
+This script is to be run on DR server, ready for self-hosted main server failure.
+
 # Endpoints
 
 POST /lucianp2dr
