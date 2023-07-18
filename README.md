@@ -5,7 +5,7 @@ Webhooks are not customizable and can only send POST requests.
 
 This script listens for post request on a given port and redirects for my usage.
 
-#Endpoints
+# Endpoints
 
 POST /lucianp2dr
 
