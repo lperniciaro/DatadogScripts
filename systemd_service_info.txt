@@ -1,0 +1,18 @@
+To create service to host script with systemd (always running)
+sudo vi /lib/systemd/system/datadog-webhook.service
+
+put in this
+[Unit]
+Description=Listening for datadog webhook for cloudflare API
+
+[Service]
+WorkingDirectory=/usr/lug/github/python_scripts/DatadogScripts/
+User=lug
+ExecStart=/usr/lug/github/python_scripts/DatadogScripts/start_host.sh
+
+[Install]
+WantedBy=multi-user.target
+
+systemctl daemon-reload
+systemctl enable datadog-webhook.service
+systemctl start datadog-webhook.service
